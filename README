@@ -1,0 +1,135 @@
+perl-Xfce4
+------------------------------------------
+Perl bindings for the Xfce4 libraries
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  gdk-pixbuf2-2.10.12-1
+  glib2-2.12.12-1
+  gtk2-x11-2.10.12-1
+  libX11_6-1.1.1-1
+  libxfce4util-4.4.1-1
+  libxfcegui4-4.4.1-1
+  perl-5.8.7-5
+  perl-Glib-1.144-1
+  perl-Gtk2-1.144-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  binutils-20060817-1
+  cygport-0.2.11-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+  perl-5.8.7-5
+  perl-ExtUtils-Depends-0.205-1
+  perl-ExtUtils-PkgConfig-1.07-1
+
+Canonical website:
+  http://spuriousinterrupt.org/projects/xfce4-perl
+  http://search.cpan.org/dist/Xfce4/
+
+Canonical download:
+  http://search.cpan.org/CPAN/authors/id/B/BJ/BJT/
+
+-------------------------------------------
+
+Build instructions:
+  unpack perl-Xfce4-0.001-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./perl-Xfce4-0.001-X.cygport all
+
+This will create:
+  /usr/src/perl-Xfce4-0.001-X-src.tar.bz2
+  /usr/src/perl-Xfce4-0.001-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/postinstall/perl-Xfce4.sh
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/AboutDialog.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/AboutInfo.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/AppMenuItem.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Clock.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/DesktopEntry.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Helpers.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/IconTheme.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Iconbutton.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Install/Files.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Install/doctypes
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Install/xfce4.typemap
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Install/xfce4perl-autogen.h
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Install/xfce4perl.h
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Install/xfce4perl.typemap
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Kiosk.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Menubutton.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Movehandler.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Netk/Application.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Netk/ClassGroup.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Netk/Pager.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Netk/Screen.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Netk/Tasklist.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Netk/TrayIcon.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Netk/Window.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Netk/Workspace.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Rc.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Resource.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/ScaledImage.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/SystemTray.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/Togglebutton.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/index.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/licenses.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/misc.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Xfce4/version.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Xfce4/.packlist
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Xfce4/Xfce4.bs
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Xfce4/Xfce4.dll
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Xfce4/libXfce4.dll.a
+  /usr/share/doc/Cygwin/perl-Xfce4-0.001.README
+  /usr/share/doc/perl-Xfce4-0.001/AUTHORS
+  /usr/share/doc/perl-Xfce4-0.001/README
+  /usr/share/man/man3/Xfce4.3pm.gz
+  /usr/share/man/man3/Xfce4.AboutDialog.3pm.gz
+  /usr/share/man/man3/Xfce4.AboutInfo.3pm.gz
+  /usr/share/man/man3/Xfce4.AppMenuItem.3pm.gz
+  /usr/share/man/man3/Xfce4.Clock.3pm.gz
+  /usr/share/man/man3/Xfce4.DesktopEntry.3pm.gz
+  /usr/share/man/man3/Xfce4.Helpers.3pm.gz
+  /usr/share/man/man3/Xfce4.IconTheme.3pm.gz
+  /usr/share/man/man3/Xfce4.Iconbutton.3pm.gz
+  /usr/share/man/man3/Xfce4.Kiosk.3pm.gz
+  /usr/share/man/man3/Xfce4.Menubutton.3pm.gz
+  /usr/share/man/man3/Xfce4.Movehandler.3pm.gz
+  /usr/share/man/man3/Xfce4.Netk.Application.3pm.gz
+  /usr/share/man/man3/Xfce4.Netk.ClassGroup.3pm.gz
+  /usr/share/man/man3/Xfce4.Netk.Pager.3pm.gz
+  /usr/share/man/man3/Xfce4.Netk.Screen.3pm.gz
+  /usr/share/man/man3/Xfce4.Netk.Tasklist.3pm.gz
+  /usr/share/man/man3/Xfce4.Netk.TrayIcon.3pm.gz
+  /usr/share/man/man3/Xfce4.Netk.Window.3pm.gz
+  /usr/share/man/man3/Xfce4.Netk.Workspace.3pm.gz
+  /usr/share/man/man3/Xfce4.Rc.3pm.gz
+  /usr/share/man/man3/Xfce4.Resource.3pm.gz
+  /usr/share/man/man3/Xfce4.ScaledImage.3pm.gz
+  /usr/share/man/man3/Xfce4.SystemTray.3pm.gz
+  /usr/share/man/man3/Xfce4.Togglebutton.3pm.gz
+  /usr/share/man/man3/Xfce4.index.3pm.gz
+  /usr/share/man/man3/Xfce4.licenses.3pm.gz
+  /usr/share/man/man3/Xfce4.misc.3pm.gz
+  /usr/share/man/man3/Xfce4.version.3pm.gz
+  /usr/share/perl/cygwin-pods/5.8/Xfce4.pod
+
+------------------
+
+Port Notes:
+
+----- version 0.001-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

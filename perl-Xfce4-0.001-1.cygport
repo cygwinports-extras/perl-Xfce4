@@ -1,0 +1,4 @@
+inherit gtk2-perl
+
+HOMEPAGE="http://spuriousinterrupt.org/projects/xfce4-perl"
+SRC_URI="mirror://cpan/authors/id/B/BJ/BJT/${ORIG_PN}-${PV}.tar.gz"

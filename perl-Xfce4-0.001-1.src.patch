@@ -1,0 +1,56 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/Xfce4-0.001/xfce4perl.h src/Xfce4-0.001/xfce4perl.h
+--- origsrc/Xfce4-0.001/xfce4perl.h	2005-09-03 11:11:07.000000000 -0500
++++ src/Xfce4-0.001/xfce4perl.h	2007-06-03 15:51:16.875000000 -0500
+@@ -22,7 +22,7 @@
+ #include <gperl.h>
+ #include <gtk2perl.h>
+ #include <libxfce4util/libxfce4util.h>
+-#include <libxfce4util/util-enum-types.h>
++#include <libxfce4util/libxfce4util-enum-types.h>
+ #include <libxfcegui4/libxfcegui4.h>
+ #include <libxfcegui4/gui-enum-types.h>
+ #include <libxfcegui4/netk-class-group.h>
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/Xfce4-0.001/xs/XfceAboutInfo.xs src/Xfce4-0.001/xs/XfceAboutInfo.xs
+--- origsrc/Xfce4-0.001/xs/XfceAboutInfo.xs	2005-09-03 09:52:19.000000000 -0500
++++ src/Xfce4-0.001/xs/XfceAboutInfo.xs	2007-06-03 16:21:30.234375000 -0500
+@@ -44,16 +44,15 @@
+ 
+ ## this is a departure from the C API, but is more perlish
+ ## void
+-## xfce_about_info_copy_from(XfceAboutInfo * info,
+-##                           XfceAboutInfo const * from);
++## xfce_about_info_copy(XfceAboutInfo * info);
++##         XfceAboutInfo * info
+ Xfce4::AboutInfo
+ xfce_about_info_copy(info)
+         Xfce4::AboutInfo info
+     PREINIT:
+         XfceAboutInfo *new_info = NULL;
+     CODE:
+-        new_info = xfce_about_info_new("", "", "", NULL, NULL);
+-        xfce_about_info_copy_from(new_info, info);
++        new_info = xfce_about_info_copy(info);
+         RETVAL = new_info;
+     OUTPUT:
+         RETVAL
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/Xfce4-0.001/xs/XfceIconTheme.xs src/Xfce4-0.001/xs/XfceIconTheme.xs
+--- origsrc/Xfce4-0.001/xs/XfceIconTheme.xs	2005-09-03 11:33:27.000000000 -0500
++++ src/Xfce4-0.001/xs/XfceIconTheme.xs	2007-06-03 16:26:22.281250000 -0500
+@@ -53,7 +53,7 @@
+         nnames = items - 2;
+         for(i = 0; i < nnames; i++)
+             icon_names = g_list_prepend(icon_names, SvGChar(ST(i+1)));
+-        icon_size = SvGInt(ST(items-1));
++        icon_size = SvGInt64(ST(items-1));
+         if(icon_names) {
+             RETVAL = xfce_icon_theme_lookup_list(icon_theme,
+                                                  icon_names,
+@@ -95,7 +95,7 @@
+         nnames = items - 2;
+         for(i = 0; i < nnames; i++)
+             icon_names = g_list_prepend(icon_names, SvGChar(ST(i+1)));
+-        icon_size = SvGInt(ST(items-1));
++        icon_size = SvGInt64(ST(items-1));
+         if(icon_names) {
+             RETVAL = xfce_icon_theme_load_list(icon_theme,
+                                                icon_names,
