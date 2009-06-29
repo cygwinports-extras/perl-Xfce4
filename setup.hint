@@ -1,4 +1,4 @@
 category: Perl Xfce
-requires: cygwin glib2 gtk2-x11 libX11_6 libxfce4util libxfcegui4 perl perl-Glib perl-Gtk2
+requires: glib2 gtk2-x11 libX11_6 libxfce4util libxfcegui4 perl perl-Glib perl-Gtk2
 sdesc: "Perl Xfce4 library bindings"
 ldesc: "Perl bindings for the Xfce4 libraries"
